@@ -13,25 +13,30 @@
     <header>
         <div class="container">
             <div class="profile">
-                <img https://cdn.discordapp.com/attachments/1309611096176463964/1311418643116195840/IMG-20241127-WA0000.jpg?ex=674a1ac9&is=6748c949&hm=c8d2420b9f2468881c8de1e4026a77899fb8d9b3c6cc5fae42befbc3d2f55915& alt="Minha Foto" class="profile-img">
+                <img src="https://cdn.discordapp.com/attachments/1309611096176463964/1311418643116195840/IMG-20241127-WA0000.jpg?ex=674a1ac9&is=6748c949&hm=c8d2420b9f2468881c8de1e4026a77899fb8d9b3c6cc5fae42befbc3d2f55915&" alt="Minha Foto" class="profile-img">
             </div>
             <div class="info">
-                <h1>Olá, eu sou Susta</h1>
-                <p>Programador Front-End</p>
+                <h1 id="name">Olá, eu sou Susta</h1>
+                <p id="role">Programador Front-End</p>
+            </div>
+            <div class="controls">
+                <button id="language-toggle">Inglês</button>
+                <button id="theme-toggle">Tema Escuro</button>
+                <button id="font-toggle">Fonte Roboto</button>
             </div>
         </div>
     </header>
 
     <section class="about">
         <div class="container">
-            <h2>Sobre Mim</h2>
-            <p>Sou um programador front-end apaixonado por criar interfaces web bonitas e funcionais. Tenho experiência com HTML, CSS, JavaScript, Python e outras tecnologias. Adoro trabalhar em projetos que desafiem minha criatividade e habilidades técnicas!</p>
+            <h2 id="about-title">Sobre Mim</h2>
+            <p id="about-text">Sou um programador front-end apaixonado por criar interfaces web bonitas e funcionais. Tenho experiência com HTML, CSS, JavaScript, Python e outras tecnologias. Adoro trabalhar em projetos que desafiem minha criatividade e habilidades técnicas!</p>
         </div>
     </section>
 
     <section class="skills">
         <div class="container">
-            <h2>Habilidades</h2>
+            <h2 id="skills-title">Habilidades</h2>
             <div class="skills-list">
                 <a href="https://www.w3schools.com/html/" target="_blank" class="skill-item">HTML5</a>
                 <a href="https://www.w3schools.com/css/" target="_blank" class="skill-item">CSS3</a>
@@ -43,7 +48,7 @@
 
     <section class="contact">
         <div class="container">
-            <h2>Entre em Contato</h2>
+            <h2 id="contact-title">Entre em Contato</h2>
             <ul>
                 <li><i class="fa fa-envelope"></i> <a href="mailto:equipesla244@gmail.com" target="_blank">Email</a></li>
                 <li><i class="fa fa-github"></i> <a href="https://github.com/joao12394" target="_blank">GitHub</a></li>
@@ -56,6 +61,44 @@
             <p>&copy; 2024 Susta. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        const languageToggle = document.getElementById('language-toggle');
+        const themeToggle = document.getElementById('theme-toggle');
+        const fontToggle = document.getElementById('font-toggle');
+
+        languageToggle.addEventListener('click', () => {
+            const isPortuguese = document.documentElement.lang === 'pt-br';
+            if (isPortuguese) {
+                document.documentElement.lang = 'en';
+                languageToggle.textContent = 'Português';
+                document.getElementById('name').textContent = 'Hello, I am Susta';
+                document.getElementById('role').textContent = 'Front-End Developer';
+                document.getElementById('about-title').textContent = 'About Me';
+                document.getElementById('about-text').textContent = 'I am a passionate front-end developer focused on creating beautiful and functional web interfaces. I have experience with HTML, CSS, JavaScript, Python, and other technologies. I love working on projects that challenge my creativity and technical skills!';
+                document.getElementById('skills-title').textContent = 'Skills';
+                document.getElementById('contact-title').textContent = 'Contact Me';
+            } else {
+                document.documentElement.lang = 'pt-br';
+                languageToggle.textContent = 'Inglês';
+                document.getElementById('name').textContent = 'Olá, eu sou Susta';
+                document.getElementById('role').textContent = 'Programador Front-End';
+                document.getElementById('about-title').textContent = 'Sobre Mim';
+                document.getElementById('about-text').textContent = 'Sou um programador front-end apaixonado por criar interfaces web bonitas e funcionais. Tenho experiência com HTML, CSS, JavaScript, Python e outras tecnologias. Adoro trabalhar em projetos que desafiem minha criatividade e habilidades técnicas!';
+                document.getElementById('skills-title').textContent = 'Habilidades';
+                document.getElementById('contact-title').textContent = 'Entre em Contato';
+            }
+        });
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            themeToggle.textContent = document.body.classList.contains('dark-theme') ? 'Tema Claro' : 'Tema Escuro';
+        });
+
+        fontToggle.addEventListener('click', () => {
+            document.body.classList.toggle('roboto-font');
+        });
+    </script>
 </body>
 
 </html>
