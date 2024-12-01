@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Susta - Programador Front-End</title>
+    <title>Sobre Mim - Programador Front-End</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,7 +21,19 @@
                 <p id="role">Programador Front-End</p>
             </div>
             <div class="controls">
-                <button id="language-toggle">Inglês</button>
+                <div class="language-select">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png" alt="Português" id="language-flag" class="language-flag">
+                    <select id="language-toggle">
+                        <option value="pt-br">Português</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="it">Italiano</option>
+                        <option value="ja">日本語</option>
+                        <!-- Adicionar mais idiomas conforme necessário -->
+                    </select>
+                </div>
                 <button id="theme-toggle">Tema Escuro</button>
                 <button id="font-toggle">Fonte Roboto</button>
             </div>
@@ -66,28 +79,66 @@
         const languageToggle = document.getElementById('language-toggle');
         const themeToggle = document.getElementById('theme-toggle');
         const fontToggle = document.getElementById('font-toggle');
+        const languageFlag = document.getElementById('language-flag');
 
-        languageToggle.addEventListener('click', () => {
-            const isPortuguese = document.documentElement.lang === 'pt-br';
-            if (isPortuguese) {
-                document.documentElement.lang = 'en';
-                languageToggle.textContent = 'Português';
-                document.getElementById('name').textContent = 'Hello, I am Susta';
-                document.getElementById('role').textContent = 'Front-End Developer';
-                document.getElementById('about-title').textContent = 'About Me';
-                document.getElementById('about-text').textContent = 'I am a passionate front-end developer focused on creating beautiful and functional web interfaces. I have experience with HTML, CSS, JavaScript, Python, and other technologies. I love working on projects that challenge my creativity and technical skills!';
-                document.getElementById('skills-title').textContent = 'Skills';
-                document.getElementById('contact-title').textContent = 'Contact Me';
-            } else {
-                document.documentElement.lang = 'pt-br';
-                languageToggle.textContent = 'Inglês';
-                document.getElementById('name').textContent = 'Olá, eu sou Susta';
-                document.getElementById('role').textContent = 'Programador Front-End';
-                document.getElementById('about-title').textContent = 'Sobre Mim';
-                document.getElementById('about-text').textContent = 'Sou um programador front-end apaixonado por criar interfaces web bonitas e funcionais. Tenho experiência com HTML, CSS, JavaScript, Python e outras tecnologias. Adoro trabalhar em projetos que desafiem minha criatividade e habilidades técnicas!';
-                document.getElementById('skills-title').textContent = 'Habilidades';
-                document.getElementById('contact-title').textContent = 'Entre em Contato';
-            }
+        const translations = {
+            "pt-br": {
+                "name": "Olá, eu sou Susta",
+                "role": "Programador Front-End",
+                "about-title": "Sobre Mim",
+                "about-text": "Sou um programador front-end apaixonado por criar interfaces web bonitas e funcionais. Tenho experiência com HTML, CSS, JavaScript, Python e outras tecnologias. Adoro trabalhar em projetos que desafiem minha criatividade e habilidades técnicas!",
+                "skills-title": "Habilidades",
+                "contact-title": "Entre em Contato"
+            },
+            "en": {
+                "name": "Hello, I am Susta",
+                "role": "Front-End Developer",
+                "about-title": "About Me",
+                "about-text": "I am a passionate front-end developer focused on creating beautiful and functional web interfaces. I have experience with HTML, CSS, JavaScript, Python, and other technologies. I love working on projects that challenge my creativity and technical skills!",
+                "skills-title": "Skills",
+                "contact-title": "Contact Me"
+            },
+            "es": {
+                "name": "Hola, soy Susta",
+                "role": "Desarrollador Front-End",
+                "about-title": "Sobre Mí",
+                "about-text": "Soy un desarrollador front-end apasionado por crear interfaces web bonitas y funcionales. Tengo experiencia con HTML, CSS, JavaScript, Python y otras tecnologías. ¡Me encanta trabajar en proyectos que desafíen mi creatividad y habilidades técnicas!",
+                "skills-title": "Habilidades",
+                "contact-title": "Contáctame"
+            },
+            "fr": {
+                "name": "Bonjour, je suis Susta",
+                "role": "Développeur Front-End",
+                "about-title": "À Propos De Moi",
+                "about-text": "Je suis un développeur front-end passionné par la création d'interfaces web belles et fonctionnelles. J'ai de l'expérience avec HTML, CSS, JavaScript, Python et d'autres technologies. J'adore travailler sur des projets qui défient ma créativité et mes compétences techniques!",
+                "skills-title": "Compétences",
+                "contact-title": "Contactez Moi"
+            },
+            // Adicione mais traduções conforme necessário
+        };
+
+        languageToggle.addEventListener('change', () => {
+            const selectedLanguage = languageToggle.value;
+
+            document.documentElement.lang = selectedLanguage;
+
+            // Atualizar texto com base na tradução
+            const translation = translations[selectedLanguage];
+            document.getElementById('name').textContent = translation.name;
+            document.getElementById('role').textContent = translation.role;
+            document.getElementById('about-title').textContent = translation.about-title;
+            document.getElementById('about-text').textContent = translation.about-text;
+            document.getElementById('skills-title').textContent = translation.skills-title;
+            document.getElementById('contact-title').textContent = translation.contact-title;
+
+            // Alterar bandeira conforme o idioma selecionado
+            const flags = {
+                "pt-br": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png",
+                "en": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Flag_of_United_States.svg/1920px-Flag_of_United_States.svg.png",
+                "es": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1920px-Flag_of_Spain.svg.png",
+                "fr": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1920px-Flag_of_France.svg.png"
+            };
+            languageFlag.src = flags[selectedLanguage];
         });
 
         themeToggle.addEventListener('click', () => {
@@ -96,7 +147,7 @@
         });
 
         fontToggle.addEventListener('click', () => {
-            document.body.classList.toggle('roboto-font');
+            document.body.style.fontFamily = document.body.style.fontFamily === 'Roboto' ? 'Arial, sans-serif' : 'Roboto';
         });
     </script>
 </body>
