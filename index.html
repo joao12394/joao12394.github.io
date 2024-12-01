@@ -20,6 +20,14 @@
             <div class="menu-toggle" id="menu-toggle">
                 <i class="fas fa-ellipsis-h"></i>
             </div>
+            <div class="language-theme-toggle">
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="pt-br">Português</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+                <button id="theme-toggle" onclick="toggleTheme()">Tema Claro/Escuro</button>
+            </div>
         </div>
     </header>
 
@@ -34,7 +42,7 @@
     <section class="about">
         <div class="container">
             <h2>Sobre Mim</h2>
-            <p>Sou um programador front-end apaixonado por criar interfaces web bonitas e funcionais. Tenho experiência com HTML, CSS, JavaScript, Python e outras tecnologias. Adoro trabalhar em projetos que desafiem minha criatividade e habilidades técnicas!</p>
+            <p id="about-text">Sou um programador front-end apaixonado por criar interfaces web bonitas e funcionais. Tenho experiência com HTML, CSS, JavaScript, Python e outras tecnologias. Adoro trabalhar em projetos que desafiem minha criatividade e habilidades técnicas!</p>
         </div>
     </section>
 
@@ -44,11 +52,6 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById("menu-toggle").addEventListener("click", function() {
-            const sideMenu = document.getElementById("side-menu");
-            sideMenu.classList.toggle("visible");
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
