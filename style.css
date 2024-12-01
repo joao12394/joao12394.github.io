@@ -79,15 +79,38 @@ header .profile {
     margin-top: 20px;
 }
 
-.language-select select {
-    padding: 5px;
-    font-size: 1rem;
+.language-select {
+    position: relative;
 }
 
-.language-flag {
-    width: 30px;
-    height: 20px;
-    margin-right: 10px;
+.language-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.language-dropdown.visible {
+    display: block;
+}
+
+.language-dropdown ul {
+    list-style: none;
+    padding: 0;
+}
+
+.language-dropdown li {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.language-dropdown li:hover {
+    background-color: #f1f1f1;
 }
 
 /* Seção Sobre Mim */
