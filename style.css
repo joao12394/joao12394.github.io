@@ -27,6 +27,7 @@ header {
     padding: 40px 0;
     width: 100%;
     text-align: center;
+    position: relative;
 }
 
 header .profile {
@@ -58,6 +59,21 @@ header .profile {
     right: 20px;
     cursor: pointer;
     font-size: 30px;
+}
+
+.language-theme-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.language-theme-toggle select,
+.language-theme-toggle button {
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 1rem;
 }
 
 .side-menu {
@@ -124,4 +140,21 @@ footer {
     text-align: center;
     padding: 20px 0;
     width: 100%;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-theme header {
+    background-color: #222;
+}
+
+body.dark-theme .side-menu {
+    background-color: #222;
+}
+
+body.dark-theme .side-menu ul li a {
+    color: #ddd;
 }
