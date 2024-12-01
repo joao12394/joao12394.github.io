@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,42 +8,47 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <div class="profile">
-                <img src="https://avatars.githubusercontent.com/u/12345678?v=4" alt="Minha Foto" class="profile-img">
+                <img src="https://cdn.discordapp.com/attachments/1309611096176463964/1311418643116195840/IMG-20241127-WA0000.jpg" alt="Minha Foto" class="profile-img">
             </div>
             <div class="info">
                 <h1>Olá, eu sou Susta</h1>
                 <p>Programador Front-End</p>
             </div>
-            <div class="menu-toggle" id="menu-toggle">
-                <i class="fas fa-ellipsis-h"></i>
-            </div>
-            <div class="language-theme-toggle">
-                <select id="language-select" onchange="changeLanguage()">
-                    <option value="pt-br">Português</option>
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                </select>
-                <button id="theme-toggle" onclick="toggleTheme()">Tema Claro/Escuro</button>
-            </div>
+            <button id="theme-toggle" onclick="toggleTheme()">Mudar Tema</button>
         </div>
     </header>
-
-    <div class="side-menu" id="side-menu">
-        <ul>
-            <li><a href="https://github.com/joao12394" target="_blank">Meu GitHub</a></li>
-            <li><a href="mailto:equipesla244@gmail.com" target="_blank">Meu Email</a></li>
-            <li><a href="#">Outras Informações</a></li>
-        </ul>
-    </div>
 
     <section class="about">
         <div class="container">
             <h2>Sobre Mim</h2>
-            <p id="about-text">Sou um programador front-end apaixonado por criar interfaces web bonitas e funcionais. Tenho experiência com HTML, CSS, JavaScript, Python e outras tecnologias. Adoro trabalhar em projetos que desafiem minha criatividade e habilidades técnicas!</p>
+            <p>Sou um programador front-end apaixonado por criar interfaces web bonitas e funcionais. Tenho experiência com HTML, CSS, JavaScript, Python e outras tecnologias. Adoro trabalhar em projetos que desafiem minha criatividade e habilidades técnicas!</p>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <div class="skills-list">
+                <a href="https://www.w3schools.com/html/" target="_blank" class="skill-item">HTML5</a>
+                <a href="https://www.w3schools.com/css/" target="_blank" class="skill-item">CSS3</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill-item">JavaScript</a>
+                <a href="https://www.python.org/" target="_blank" class="skill-item">Python</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <ul>
+                <li><i class="fa fa-envelope"></i> <a href="mailto:equipesla244@gmail.com" target="_blank">Email</a></li>
+                <li><i class="fa fa-github"></i> <a href="https://github.com/joao12394" target="_blank">GitHub</a></li>
+            </ul>
         </div>
     </section>
 
@@ -52,6 +58,11 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
 </body>
+
 </html>
