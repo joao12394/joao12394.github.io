@@ -6,65 +6,35 @@
     <title>Sobre Mim - Programador Front-End</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="profile">
-                <img src="https://cdn.discordapp.com/attachments/1309611096176463964/1311418643116195840/IMG-20241127-WA0000.jpg?ex=674a1ac9&is=6748c949&hm=c8d2420b9f2468881c8de1e4026a77899fb8d9b3c6cc5fae42befbc3d2f55915&" alt="Minha Foto" class="profile-img">
+                <img src="https://avatars.githubusercontent.com/u/12345678?v=4" alt="Minha Foto" class="profile-img">
             </div>
             <div class="info">
-                <h1 id="name">Olá, eu sou Susta</h1>
-                <p id="role">Programador Front-End</p>
+                <h1>Olá, eu sou Susta</h1>
+                <p>Programador Front-End</p>
             </div>
-            <div class="controls">
-                <button id="theme-toggle">Tema Escuro</button>
-                <button id="font-toggle">Fonte Roboto</button>
-                <div class="language-select">
-                    <button id="language-toggle">Selecionar Idioma</button>
-                    <div id="language-dropdown" class="language-dropdown">
-                        <ul>
-                            <li data-lang="pt-br">Português</li>
-                            <li data-lang="en">English</li>
-                            <li data-lang="es">Español</li>
-                            <li data-lang="fr">Français</li>
-                            <li data-lang="de">Deutsch</li>
-                            <li data-lang="it">Italiano</li>
-                            <li data-lang="ja">日本語</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-ellipsis-h"></i>
             </div>
         </div>
     </header>
 
+    <div class="side-menu" id="side-menu">
+        <ul>
+            <li><a href="https://github.com/joao12394" target="_blank">Meu GitHub</a></li>
+            <li><a href="mailto:equipesla244@gmail.com" target="_blank">Meu Email</a></li>
+            <li><a href="#">Outras Informações</a></li>
+        </ul>
+    </div>
+
     <section class="about">
         <div class="container">
-            <h2 id="about-title">Sobre Mim</h2>
-            <p id="about-text">Sou um programador front-end apaixonado por criar interfaces web bonitas e funcionais. Tenho experiência com HTML, CSS, JavaScript, Python e outras tecnologias. Adoro trabalhar em projetos que desafiem minha criatividade e habilidades técnicas!</p>
-        </div>
-    </section>
-
-    <section class="skills">
-        <div class="container">
-            <h2 id="skills-title">Habilidades</h2>
-            <div class="skills-list">
-                <a href="https://www.w3schools.com/html/" target="_blank" class="skill-item">HTML5</a>
-                <a href="https://www.w3schools.com/css/" target="_blank" class="skill-item">CSS3</a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill-item">JavaScript</a>
-                <a href="https://www.python.org/" target="_blank" class="skill-item">Python</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact">
-        <div class="container">
-            <h2 id="contact-title">Entre em Contato</h2>
-            <ul>
-                <li><i class="fa fa-envelope"></i> <a href="mailto:equipesla244@gmail.com" target="_blank">Email</a></li>
-                <li><i class="fa fa-github"></i> <a href="https://github.com/joao12394" target="_blank">GitHub</a></li>
-            </ul>
+            <h2>Sobre Mim</h2>
+            <p>Sou um programador front-end apaixonado por criar interfaces web bonitas e funcionais. Tenho experiência com HTML, CSS, JavaScript, Python e outras tecnologias. Adoro trabalhar em projetos que desafiem minha criatividade e habilidades técnicas!</p>
         </div>
     </section>
 
@@ -75,105 +45,9 @@
     </footer>
 
     <script>
-        // Função para mudar o conteúdo baseado no idioma selecionado
-        const translations = {
-            "pt-br": {
-                "name": "Olá, eu sou Susta",
-                "role": "Programador Front-End",
-                "about-title": "Sobre Mim",
-                "about-text": "Sou um programador front-end apaixonado por criar interfaces web bonitas e funcionais. Tenho experiência com HTML, CSS, JavaScript, Python e outras tecnologias. Adoro trabalhar em projetos que desafiem minha criatividade e habilidades técnicas!",
-                "skills-title": "Habilidades",
-                "contact-title": "Entre em Contato"
-            },
-            "en": {
-                "name": "Hello, I am Susta",
-                "role": "Front-End Developer",
-                "about-title": "About Me",
-                "about-text": "I am a passionate front-end developer focused on creating beautiful and functional web interfaces. I have experience with HTML, CSS, JavaScript, Python, and other technologies. I love working on projects that challenge my creativity and technical skills!",
-                "skills-title": "Skills",
-                "contact-title": "Contact Me"
-            },
-            "es": {
-                "name": "Hola, soy Susta",
-                "role": "Desarrollador Front-End",
-                "about-title": "Sobre Mí",
-                "about-text": "Soy un desarrollador front-end apasionado por crear interfaces web bonitas y funcionales. Tengo experiencia con HTML, CSS, JavaScript, Python y otras tecnologías. ¡Me encanta trabajar en proyectos que desafíen mi creatividad y habilidades técnicas!",
-                "skills-title": "Habilidades",
-                "contact-title": "Contáctame"
-            },
-            "fr": {
-                "name": "Bonjour, je suis Susta",
-                "role": "Développeur Front-End",
-                "about-title": "À Propos De Moi",
-                "about-text": "Je suis un développeur front-end passionné par la création d'interfaces web belles et fonctionnelles. J'ai de l'expérience avec HTML, CSS, JavaScript, Python et d'autres technologies. J'adore travailler sur des projets qui défient ma créativité et mes compétences techniques!",
-                "skills-title": "Compétences",
-                "contact-title": "Contactez Moi"
-            },
-            "de": {
-                "name": "Hallo, ich bin Susta",
-                "role": "Front-End Entwickler",
-                "about-title": "Über Mich",
-                "about-text": "Ich bin ein leidenschaftlicher Front-End-Entwickler, der sich auf die Erstellung schöner und funktionaler Web-Interfaces konzentriert. Ich habe Erfahrung mit HTML, CSS, JavaScript, Python und anderen Technologien. Ich liebe es, an Projekten zu arbeiten, die meine Kreativität und technischen Fähigkeiten herausfordern!",
-                "skills-title": "Fähigkeiten",
-                "contact-title": "Kontaktiere Mich"
-            },
-            "it": {
-                "name": "Ciao, sono Susta",
-                "role": "Sviluppatore Front-End",
-                "about-title": "Chi Sono",
-                "about-text": "Sono un sviluppatore front-end appassionato di creare interfacce web belle e funzionali. Ho esperienza con HTML, CSS, JavaScript, Python e altre tecnologie. Amo lavorare su progetti che sfidano la mia creatività e abilità tecniche!",
-                "skills-title": "Competenze",
-                "contact-title": "Contattami"
-            },
-            "ja": {
-                "name": "こんにちは、私はSustaです",
-                "role": "フロントエンド開発者",
-                "about-title": "私について",
-                "about-text": "私は美しく機能的なウェブインターフェイスを作成することに情熱を注いでいるフロントエンド開発者です。HTML、CSS、JavaScript、Python、その他の技術に経験があります。私の創造性と技術的なスキルを試すプロジェクトに取り組むのが大好きです。",
-                "skills-title": "スキル",
-                "contact-title": "お問い合わせ"
-            }
-        };
-
-        // Seletor de idioma
-        const languageDropdown = document.getElementById("language-dropdown");
-        const languageButton = document.getElementById("language-toggle");
-
-        languageButton.addEventListener("click", () => {
-            languageDropdown.classList.toggle("visible");
-        });
-
-        const languageItems = languageDropdown.querySelectorAll("li");
-        languageItems.forEach(item => {
-            item.addEventListener("click", () => {
-                const selectedLang = item.getAttribute("data-lang");
-                loadTranslation(selectedLang);
-                languageDropdown.classList.remove("visible");
-            });
-        });
-
-        // Função para carregar traduções com base no idioma selecionado
-        function loadTranslation(lang) {
-            const translation = translations[lang];
-            document.getElementById("name").textContent = translation.name;
-            document.getElementById("role").textContent = translation.role;
-            document.getElementById("about-title").textContent = translation["about-title"];
-            document.getElementById("about-text").textContent = translation["about-text"];
-            document.getElementById("skills-title").textContent = translation["skills-title"];
-            document.getElementById("contact-title").textContent = translation["contact-title"];
-        }
-
-        // Tema Escuro
-        const themeToggle = document.getElementById('theme-toggle');
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme');
-            themeToggle.textContent = document.body.classList.contains('dark-theme') ? 'Tema Claro' : 'Tema Escuro';
-        });
-
-        // Fonte Roboto
-        const fontToggle = document.getElementById('font-toggle');
-        fontToggle.addEventListener('click', () => {
-            document.body.style.fontFamily = document.body.style.fontFamily === 'Roboto' ? 'Arial, sans-serif' : 'Roboto';
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            const sideMenu = document.getElementById("side-menu");
+            sideMenu.classList.toggle("visible");
         });
     </script>
 </body>
