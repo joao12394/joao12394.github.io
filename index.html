@@ -1,30 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio de Susta</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Susta</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Susta - Desenvolvedor Front-End</h1>
-  </header>
 
-  <section id="intro">
-    <img src="https://cdn.discordapp.com/attachments/1310057228799184896/1312810898880073738/IMG-20241127-WA0000.jpg" alt="Foto de Susta" class="foto-perfil">
-    <p>Bem-vindo! Explore minhas habilidades e conhecimentos clicando nos botões abaixo:</p>
-  </section>
+    <!-- Tela de Carregamento -->
+    <div class="loading-screen">
+        <div class="loader">
+            <img src="sua-foto.jpg" alt="Sua Foto" class="photo">
+            <h2>Carregando...</h2>
+        </div>
+    </div>
 
-  <section id="qualidades">
-    <button onclick="window.open('https://developer.mozilla.org/pt-BR/docs/Web/HTML', '_blank')">HTML</button>
-    <button onclick="window.open('https://developer.mozilla.org/pt-BR/docs/Web/CSS', '_blank')">CSS</button>
-    <button onclick="window.open('https://www.python.org/', '_blank')">Python</button>
-    <button onclick="window.open('https://discord.com/', '_blank')">Moderação no Discord</button>
-  </section>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+        <header>
+            <h1>Bem-vindo ao meu portfólio</h1>
+            <p>Especialista em HTML, CSS, JavaScript, Python e Moderação do Discord</p>
+        </header>
 
-  <footer>
-    <p>© 2024 Susta. Todos os direitos reservados.</p>
-  </footer>
+        <section class="experiences">
+            <h2>Minhas Experiências</h2>
+            <div class="skills">
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                    <p>Criação de websites dinâmicos e responsivos.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>CSS</h3>
+                    <p>Design visual moderno e adaptável para qualquer dispositivo.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Desenvolvimento de funcionalidades interativas e dinâmicas.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Python</h3>
+                    <p>Automação, desenvolvimento de scripts e backend.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Moderação do Discord</h3>
+                    <p>Gestão e moderação de comunidades online de forma eficiente e amigável.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section class="contact">
+            <h2>Entre em Contato</h2>
+            <p>Email: <a href="mailto:equipesla244@gmail.com">equipesla244@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/joao12394" target="_blank">github.com/joao12394</a></p>
+        </section>
+    </div>
+
 </body>
 </html>
