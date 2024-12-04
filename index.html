@@ -24,38 +24,50 @@
             <p>Especialista em HTML, CSS, JavaScript, Python e Moderação do Discord</p>
         </header>
 
-        <section class="experiences">
-            <h2>Minhas Experiências</h2>
+        <!-- Navegação com abas -->
+        <nav class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'about')">Sobre Mim</button>
+            <button class="tab-button" onclick="openTab(event, 'skills')">Habilidades</button>
+            <button class="tab-button" onclick="openTab(event, 'contact')">Contato</button>
+        </nav>
+
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content" id="about">
+            <h2>Minha História</h2>
+            <p>Olá, meu nome é Susta. Sou apaixonado por tecnologia e comecei a me aprofundar no desenvolvimento web há alguns anos. Com o tempo, fui expandindo meus conhecimentos para outras áreas, como a moderação de servidores Discord e automação com Python. Meu objetivo é criar soluções criativas e eficientes para problemas do cotidiano. Ao longo dessa jornada, me especializei em HTML, CSS, JavaScript, Python e gestão de comunidades.</p>
+        </div>
+
+        <div class="tab-content" id="skills">
+            <h2>Minhas Habilidades</h2>
             <div class="skills">
                 <div class="skill-card">
                     <h3>HTML</h3>
-                    <p>Criação de websites dinâmicos e responsivos.</p>
+                    <p>Criação de websites dinâmicos e responsivos, sempre com as melhores práticas de acessibilidade e SEO.</p>
                 </div>
                 <div class="skill-card">
                     <h3>CSS</h3>
-                    <p>Design visual moderno e adaptável para qualquer dispositivo.</p>
+                    <p>Design visual moderno e adaptável para qualquer dispositivo, utilizando Flexbox, Grid e animações CSS.</p>
                 </div>
                 <div class="skill-card">
                     <h3>JavaScript</h3>
-                    <p>Desenvolvimento de funcionalidades interativas e dinâmicas.</p>
+                    <p>Desenvolvimento de funcionalidades interativas, APIs e integrações com outras tecnologias.</p>
                 </div>
                 <div class="skill-card">
                     <h3>Python</h3>
-                    <p>Automação, desenvolvimento de scripts e backend.</p>
+                    <p>Automação de tarefas e criação de scripts para simplificar e otimizar processos.</p>
                 </div>
                 <div class="skill-card">
                     <h3>Moderação do Discord</h3>
-                    <p>Gestão e moderação de comunidades online de forma eficiente e amigável.</p>
+                    <p>Gestão e moderação de comunidades online com foco em organização, segurança e interação positiva.</p>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Contato -->
-        <section class="contact">
+        <div class="tab-content" id="contact">
             <h2>Entre em Contato</h2>
             <p>Email: <a href="mailto:equipesla244@gmail.com">equipesla244@gmail.com</a></p>
             <p>GitHub: <a href="https://github.com/joao12394" target="_blank">github.com/joao12394</a></p>
-        </section>
+        </div>
     </div>
 
 </body>
