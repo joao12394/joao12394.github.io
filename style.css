@@ -7,14 +7,20 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1c1c1c;
-    color: white;
+    background-color: #121212;
+    color: #e0e0e0;
     overflow-x: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 a {
-    color: #00ff99;
+    color: #00bcd4;
     text-decoration: none;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
 }
 
 /* Tela de carregamento */
@@ -24,7 +30,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,6 +53,7 @@ a {
 
 .loader h2 {
     font-size: 24px;
+    color: #00bcd4;
     animation: fadeInText 3s ease-out;
 }
 
@@ -93,7 +100,7 @@ header {
 
 h1 {
     font-size: 3em;
-    color: #00ff99;
+    color: #00bcd4;
     margin-bottom: 10px;
     animation: slideUp 1s ease-out;
 }
@@ -114,24 +121,26 @@ p {
 }
 
 .tab-button {
-    padding: 10px 20px;
-    font-size: 1.2em;
+    padding: 15px 25px;
+    font-size: 1.1em;
     background-color: #333;
     color: white;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .tab-button:hover {
-    background-color: #00ff99;
+    background-color: #00bcd4;
     transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 188, 212, 0.7);
 }
 
 .tab-button.active {
-    background-color: #00ff99;
+    background-color: #00bcd4;
 }
 
 /* Conteúdo das Abas */
@@ -207,14 +216,4 @@ p {
 
     .skills {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-
-    .tab-content {
-        padding: 10px;
-    }
-
-    .skill-card {
-        padding: 15px;
-    }
+        grid
