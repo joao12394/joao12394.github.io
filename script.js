@@ -11,4 +11,19 @@ function openTab(evt, tabName) {
     // Ocultar todos os conteúdos das abas
     let i, tabcontent, tabbuttons;
     tabcontent = document.getElementsByClassName("tab-content");
-    for (
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
+    }
+
+    // Remover a classe "active" de todos os botões
+    tabbuttons = document.getElementsByClassName("tab-button");
+    for (i = 0; i < tabbuttons.length; i++) {
+        tabbuttons[i].classList.remove("active");
+    }
+
+    // Mostrar o conteúdo da aba clicada
+    document.getElementById(tabName).classList.add("active");
+
+    // Adicionar a classe "active" ao botão clicado
+    evt.currentTarget.classList.add("active");
+}
