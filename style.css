@@ -197,6 +197,11 @@ p {
     color: #bbb;
 }
 
+.project-link {
+    color: #00bcd4;
+    font-weight: bold;
+}
+
 /* Cards de habilidades */
 .skills {
     display: grid;
