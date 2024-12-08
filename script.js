@@ -24,7 +24,7 @@ function openTab(evt, tabName) {
 
     // Mostra o conteúdo da aba selecionada
     document.getElementById(tabName).classList.add("active");
-    
-    // Marca o botão da aba como "ativo"
+
+    // Adiciona a classe "active" ao botão da aba selecionada
     evt.currentTarget.classList.add("active");
 }
