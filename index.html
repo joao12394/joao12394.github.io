@@ -8,39 +8,35 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Tela de Carregamento Futurista -->
+
     <div class="loading-screen">
         <div class="loader">
             <div class="spinner"></div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Portrait_of_a_woman%2C_bust-length%2C_in_a_yellow_dress%2C_1800%2C_attributed_to_Gustavus_Washington.jpg/800px-Portrait_of_a_woman%2C_bust-length%2C_in_a_yellow_dress%2C_1800%2C_attributed_to_Gustavus_Washington.jpg" alt="Minha Foto" class="intro-photo">
             <h2>Carregando...</h2>
         </div>
     </div>
 
-    <!-- Conteúdo Principal -->
     <div class="main-content">
         <header>
-            <h1>Portfólio Susta</h1>
-            <p>Especialista em HTML, CSS, JavaScript, Python e Moderação do Discord</p>
+            <h1>Portfólio de Susta</h1>
+            <p>Desenvolvedor Front-end | Python | Moderação Discord</p>
         </header>
 
-        <!-- Foto Oval do Usuário -->
         <div class="user-photo">
             <img src="https://i.imgur.com/6t89NIU.jpeg" alt="Foto de Susta" class="photo-oval">
         </div>
 
-        <!-- Abas de Navegação -->
         <nav class="tabs">
-            <button class="tab-button active" onclick="openTab(event, 'about')">⋮ Sobre Mim</button>
-            <button class="tab-button" onclick="openTab(event, 'skills')">⋮ Habilidades</button>
-            <button class="tab-button" onclick="openTab(event, 'projects')">⋮ Projetos</button>
-            <button class="tab-button" onclick="openTab(event, 'contact')">⋮ Contato</button>
+            <button class="tab-button active" onclick="openTab(event, 'about')">Sobre Mim</button>
+            <button class="tab-button" onclick="openTab(event, 'skills')">Habilidades</button>
+            <button class="tab-button" onclick="openTab(event, 'projects')">Projetos</button>
+            <button class="tab-button" onclick="openTab(event, 'certificates')">Certificados</button>
+            <button class="tab-button" onclick="openTab(event, 'contact')">Contato</button>
         </nav>
 
-        <!-- Conteúdo das Abas -->
         <div class="tab-content active" id="about">
             <h2>Minha História</h2>
-            <p>Sou apaixonado por tecnologia e busco sempre me aprimorar no desenvolvimento web e em gestão de comunidades. Minha trajetória combina criatividade, eficiência e a busca por soluções inovadoras.</p>
+            <p>Olá, sou Susta! Apaixonado por tecnologia, comecei a explorar o mundo do desenvolvimento web e automação com Python. Com o tempo, me especializei em HTML, CSS, JavaScript e também me tornei moderador de comunidades no Discord.</p>
         </div>
 
         <div class="tab-content" id="skills">
@@ -48,23 +44,23 @@
             <div class="skills">
                 <div class="skill-card">
                     <h3>HTML</h3>
-                    <p>Criação de websites dinâmicos e responsivos, focando em acessibilidade e SEO.</p>
+                    <p>Criação de websites dinâmicos e responsivos, com foco em acessibilidade e SEO.</p>
                 </div>
                 <div class="skill-card">
                     <h3>CSS</h3>
-                    <p>Design moderno com Flexbox, Grid e animações estilizadas.</p>
+                    <p>Design visual moderno e responsivo, utilizando Flexbox, Grid e animações CSS.</p>
                 </div>
                 <div class="skill-card">
                     <h3>JavaScript</h3>
-                    <p>Funcionalidades interativas e desenvolvimento de APIs.</p>
+                    <p>Desenvolvimento de funcionalidades interativas e integrações com APIs.</p>
                 </div>
                 <div class="skill-card">
                     <h3>Python</h3>
-                    <p>Automação e scripts para otimização de processos.</p>
+                    <p>Automação de tarefas e criação de scripts para melhorar a eficiência.</p>
                 </div>
                 <div class="skill-card">
-                    <h3>Moderação do Discord</h3>
-                    <p>Gestão de comunidades com foco em segurança e interação positiva.</p>
+                    <h3>Moderação Discord</h3>
+                    <p>Gestão de comunidades online, garantindo um ambiente seguro e organizado.</p>
                 </div>
             </div>
         </div>
@@ -73,29 +69,45 @@
             <h2>Meus Projetos</h2>
             <div class="project-card">
                 <h3>HyperHosting</h3>
-                <p>Plataforma de hospedagem de sites e servidores. <a href="#" class="project-link">Ver Detalhes</a></p>
+                <p>Plataforma de hospedagem de sites, bots e servidores de Minecraft. Desenvolvi o site focando em usabilidade e desempenho.</p>
             </div>
             <div class="project-card">
                 <h3>Mini Gerenciador de Tarefas</h3>
-                <p>Site para organização de tarefas diárias. <a href="#" class="project-link">Ver Detalhes</a></p>
+                <p>Aplicativo web para gerenciar tarefas diárias. Desenvolvido com HTML, CSS e JavaScript.</p>
             </div>
             <div class="project-card">
                 <h3>Jogo da Cobrinha</h3>
-                <p>Jogo clássico recriado com JavaScript. <a href="https://jogodacobrinha.github.io" target="_blank" class="project-link">Jogar</a></p>
+                <p>Jogo clássico da cobrinha, desenvolvido com HTML, CSS e JavaScript. Jogue agora!</p>
+                <a href="https://jogodacobrinha.github.io" target="_blank" class="project-link">Jogar Agora</a>
             </div>
-            <div class="project-card">
-                <h3>Jogo da Velha</h3>
-                <p>Divertido jogo interativo. <a href="https://jogodavelhasite.github.io" target="_blank" class="project-link">Jogar</a></p>
+        </div>
+
+        <div class="tab-content" id="certificates">
+            <h2>Meus Certificados</h2>
+            <div class="certificate-card">
+                <img src="https://i.imgur.com/vNU7nGd.jpeg" alt="Certificado Python" class="certificate-img">
+                <p>Certificado em Python</p>
+            </div>
+            <div class="certificate-card">
+                <img src="https://i.imgur.com/tzabt5Z.jpeg" alt="Certificado HTML/CSS" class="certificate-img">
+                <p>Certificado em HTML/CSS</p>
+            </div>
+            <div class="certificate-card">
+                <img src="https://i.imgur.com/YWYDjx6.jpeg" alt="Certificado JavaScript" class="certificate-img">
+                <p>Certificado em JavaScript</p>
+            </div>
+            <div class="certificate-card">
+                <img src="https://i.imgur.com/CoaVsRl.jpeg" alt="Certificado Moderação Discord" class="certificate-img">
+                <p>Certificado em Moderação Discord</p>
             </div>
         </div>
 
         <div class="tab-content" id="contact">
             <h2>Entre em Contato</h2>
-            <div class="contact-links">
-                <a href="mailto:equipesla244@gmail.com" class="contact-button">Email</a>
-                <a href="https://github.com/joao12394" target="_blank" class="contact-button">GitHub</a>
-            </div>
+            <p>Email: <a href="mailto:equipesla244@gmail.com">equipesla244@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/joao12394" target="_blank">github.com/joao12394</a></p>
         </div>
     </div>
+
 </body>
 </html>
